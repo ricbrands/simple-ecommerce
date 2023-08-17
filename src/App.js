@@ -1,24 +1,54 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from "react";
 import './App.css';
+import Footer from "./Footer";
+import Header from "./Header";
+import { getProducts } from './services/productService'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+  const [size, setSize] = useState("");
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getProducts("shoes").then((response) => setProducts(response));
+  }, []);
+
+  function renderProduct(p) {
+    return (
+      <div key={p.id} className="product">
+        <a href="/">
+          <img src={`/images/${p.image}`} alt={p.name} />
+          <h3>{p.name}</h3>
+          <p>${p.price}</p>
         </a>
-      </header>
-    </div>
+      </div>
+    );
+  }
+
+  const filteredProducts = size ? products.filter((p) => p.skus.find((s) => s.size === parseInt(size)))
+  : products;
+
+  return (
+    <>
+      <div className="content">
+        <Header />
+        <main>
+          <section id="filters">
+            <label htmlFor="size">Filter by Size:</label>{" "}
+            <select id="size" value={size} onChange={(e) => setSize(e.target.value)}>
+              <option value="">All sizes</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+            </select>
+            { size && <h2> Found {filteredProducts.length} items</h2>}
+          </section>
+          <section id="products">{filteredProducts.map(renderProduct)}</section>
+        </main>
+      </div>
+      <Footer />
+    </>
   );
 }
 
