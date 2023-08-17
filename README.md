@@ -1,6 +1,10 @@
 # simple-ecommerce
 
-A simple ecommerce app made with React
+A simple ecommerce app made with React.
+
+# Error Handling
+
+This project uses the React error boundary to show a friendly message to the user if our API call fails or an error occurs in anyone of the components. An error boundary must be a class component and declares some basic state for tracking wheter an error has occurred. Inside of render function, if there is an error, it will display a message that something went wrong. Otherwise, it will render whatever child components are nested underneath. You can see it in the ErrorBoundary file.
 
 # Getting Started with Create React App
 
