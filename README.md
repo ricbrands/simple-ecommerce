@@ -2,9 +2,13 @@
 
 A simple ecommerce app made with React.
 
-# Error Handling
+## Custom Hooks
 
-This project uses the React error boundary to show a friendly message to the user if our API call fails or an error occurs in anyone of the components. An error boundary must be a class component and declares some basic state for tracking wheter an error has occurred. Inside of render function, if there is an error, it will display a message that something went wrong. Otherwise, it will render whatever child components are nested underneath. You can see it in the ErrorBoundary file.
+It was created a hook called useFetch that makes it easy to make http calls using fetch. With this hook it's possible to make an API call, store the result and handle the loading and error state in a much easier way.
+
+## Error Handling
+
+This project uses the React error boundary to show a friendly message to the user if our API call fails or an error occurs in anyone of the components. An error boundary must be a class component and declares some basic state for tracking wherever an error has occurred. Inside of render function, if there is an error, it will display a message that something went wrong. Otherwise, it will render whatever child components are nested underneath. You can see it in the ErrorBoundary file.
 
 # Getting Started with Create React App
 
