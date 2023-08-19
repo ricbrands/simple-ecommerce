@@ -1,48 +1,74 @@
 {
-    "products": [
+  "products": [
+    {
+      "id": 1,
+      "category": "shoes",
+      "image": "shoe1.jpg",
+      "name": "Hiker",
+      "price": 75.35,
+      "skus": [
         {
-            "id": 1,
-            "category": "shoes",
-            "image": "shoe1.jpg",
-            "name": "Hiker",
-            "price": 75.35,
-            "skus": [
-                { "sku": "17", "size": 37 },
-                { "sku": "18", "size": 38}
-            ],
-            "description": "This rugged boot will get you up to the mountain safely."
+          "sku": "17",
+          "size": 37
         },
         {
-            "id": 2,
-            "category": "shoes",
-            "image": "shoe2.jpg",
-            "name": "Climber",
-            "price": 98.99,
-            "skus": [
-                { "sku": "27", "size": 40 },
-                { "sku": "28", "size": 41}
-            ],
-            "description": "Sure-footed traction in slippery conditions."
+          "sku": "18",
+          "size": 38
+        }
+      ],
+      "description": "This rugged boot will get you up to the mountain safely."
+    },
+    {
+      "id": 2,
+      "category": "shoes",
+      "image": "shoe2.jpg",
+      "name": "Climber",
+      "price": 98.99,
+      "skus": [
+        {
+          "sku": "27",
+          "size": 40
         },
         {
-            "id": 3,
-            "category": "shoes",
-            "image": "shoe3.jpg",
-            "name": "Explorer",
-            "price": 189.10,
-            "skus": [
-                { "sku": "37", "size": 39 },
-                { "sku": "38", "size": 40},
-                { "sku": "39", "size": 41}
-            ],
-            "description": "Look stylish while stomping in the mud."
+          "sku": "28",
+          "size": 41
         }
-    ],
-    "shippingAddress": [
+      ],
+      "description": "Sure-footed traction in slippery conditions."
+    },
+    {
+      "id": 3,
+      "category": "shoes",
+      "image": "shoe3.jpg",
+      "name": "Explorer",
+      "price": 189.1,
+      "skus": [
         {
-            "id": 1,
-            "city": "",
-            "country": ""
+          "sku": "37",
+          "size": 39
+        },
+        {
+          "sku": "38",
+          "size": 40
+        },
+        {
+          "sku": "39",
+          "size": 41
         }
-    ]
+      ],
+      "description": "Look stylish while stomping in the mud."
+    }
+  ],
+  "shippingAddress": [
+    {
+      "id": 1,
+      "city": "",
+      "country": ""
+    },
+    {
+      "city": "",
+      "country": "",
+      "id": 2
+    }
+  ]
 }
