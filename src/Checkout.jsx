@@ -14,7 +14,7 @@ const emptyAddress = {
     country: "",
 }
 
-export default function Checkout({ cart, emptyCart }) {
+export default function Checkout({ cart, dispatch }) {
     const [address, setAddress] = useState(emptyAddress);
     const [status, setStatus] = useState(STATUS.IDLE);
     const [saveError, setSaveError] = useState(null);
@@ -22,7 +22,7 @@ export default function Checkout({ cart, emptyCart }) {
 
     // derived state
     const errors = getErrors(address);
-    const isValid = Object.keys.length === 0;
+    const isValid = Object.keys(errors).length === 0;
 
     function handleChange(e) {
         e.persist(); // persist the event (isn't necessary in React 17 or newer since React 17 no longer pools events)
@@ -46,7 +46,7 @@ export default function Checkout({ cart, emptyCart }) {
         if (isValid) {
             try {
                 await saveShippingAddress(address);
-                emptyCart();
+                dispatch({ type: "empty" });
                 setStatus(STATUS.COMPLETED);
             } catch (e) {
                 setSaveError(e);
