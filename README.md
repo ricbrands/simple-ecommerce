@@ -1,6 +1,7 @@
 # simple-ecommerce
 
 A simple ecommerce app made with React.
+This project aims to verify the main features of React, like Hooks (useState, useEffect, useRef, custom hook), router, fetching data, error boundary, form validation, local storage and component creation. It simulates an ecommerce with the shopping cart and checkout, and all related behaviors, like add, update and delete from cart and checkout.
 
 ## Custom Hooks
 
@@ -10,73 +11,40 @@ It was created a hook called useFetch that makes it easy to make http calls usin
 
 This project uses the React error boundary to show a friendly message to the user if our API call fails or an error occurs in anyone of the components. An error boundary must be a class component and declares some basic state for tracking wherever an error has occurred. Inside of render function, if there is an error, it will display a message that something went wrong. Otherwise, it will render whatever child components are nested underneath. You can see it in the ErrorBoundary file.
 
-# Getting Started with Create React App
+# Quick Start
+
+Run the following commands:
+
+```
+npm install
+npm start
+```
+
+This will install dependecies, then start the app and the mock API.
+
+## Starter Project Overview
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+The following enhancements were made:
 
-In the project directory, you can run:
+1. Added mock API using [json-server](https://github.com/typicode/json-server) and configured `npm start` to run the app and the mock API at the same time.
+1. Added some React components.
+1. Added App.css with basic styles.
+1. Added some images to './public'.
+1. Added functions for fetching data in `/src/services`.
 
-### `yarn start`
+Installed json-server, npm-run-all, react-router-dom, history, cross-env
+Customized start script
+Added db.json to root
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# To-dos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add automated tests
+- Convert Javascript to Typescript
+- Add another categories of products for sale
+- Finish the checkout process, adding billing and shipping info
+- Display cart quantity in nav
+- Deduplicate requests in useFetchAll
+- Enhance the useFetchAll hook to accept a separate init argument
+- Try using react-query or swr to handle the app's API calls.
