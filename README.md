@@ -2,7 +2,6 @@
 
 A simple ecommerce app made with React.
 This project aims to verify the main features of React, like Hooks (useState, useEffect, useRef, custom hook), router, fetching data, error boundary, form validation, local storage and component creation. It simulates an ecommerce with the shopping cart and checkout, and all related behaviors, like add, update and delete from cart and checkout.
-This project aims to verify the main features of React, like Hooks (useState, useEffect, useRef, custom hook), router, fetching data, error boundary, form validation, local storage and component creation. It simulates an ecommerce with the shopping cart and checkout, and all related behaviors, like add, update and delete from cart and checkout.
 
 ## Custom Hooks
 
@@ -11,19 +10,6 @@ It was created a hook called useFetch that makes it easy to make http calls usin
 ## Error Handling
 
 This project uses the React error boundary to show a friendly message to the user if our API call fails or an error occurs in anyone of the components. An error boundary must be a class component and declares some basic state for tracking wherever an error has occurred. Inside of render function, if there is an error, it will display a message that something went wrong. Otherwise, it will render whatever child components are nested underneath. You can see it in the ErrorBoundary file.
-
-# Quick Start
-
-Run the following commands:
-
-```
-npm install
-npm start
-```
-
-This will install dependecies, then start the app and the mock API.
-
-## Starter Project Overview
 
 # Quick Start
 
