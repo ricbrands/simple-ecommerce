@@ -54,8 +54,6 @@ Added db.json to root
 
 # To-dos
 
-# To-dos
-
 - Add automated tests
 - Convert Javascript to Typescript
 - Add another categories of products for sale
